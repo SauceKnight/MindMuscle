@@ -8,14 +8,17 @@ bp = Blueprint("muscle", __name__, url_prefix="")
 @bp.route("/<musclename>")
 def get_workouts(musclename):
     muscle = Muscle.query.filter_by(name=musclename).first()
-    workoutplans = []
+    workoutplans = {}
+    workoutIds = []
     for plan in muscle.workoutplans:
-        workoutplans.append(plan.id)
+        workoutplans[plan.id] = {
+            "id": plan.id, "name": plan.name, "description": plan.description}
+        workoutIds.append(plan.id)
     data = {}
     data[muscle.id] = {
         "id": muscle.id,
         "name": muscle.name,
         "description": muscle.description,
-        "workoutplans": workoutplans
+        "workoutplans": workoutIds
     }
-    return {"data": data}
+    return {"data": data, "WorkoutPlans": workoutplans}

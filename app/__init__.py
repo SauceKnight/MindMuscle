@@ -11,6 +11,9 @@ db.init_app(app)
 Migrate(app, db)
 CORS(app)
 
-from .routes import workoutplan, muscle  # noqa
+from .routes import workoutplan, muscle, exercise, user, review  # noqa
 app.register_blueprint(workoutplan.bp)
 app.register_blueprint(muscle.bp)
+app.register_blueprint(exercise.bp)
+app.register_blueprint(user.bp)
+app.register_blueprint(review.bp)

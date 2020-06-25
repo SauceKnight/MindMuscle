@@ -1,0 +1,1 @@
+web: python mind_muscle_app.py

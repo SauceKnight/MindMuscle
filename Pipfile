@@ -19,6 +19,7 @@ sqlalchemy = "*"
 wtforms = "*"
 flask-wtf = "*"
 flask-cors = "*"
+dotenv = "*"
 
 [requires]
 python_version = "3.8"

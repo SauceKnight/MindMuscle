@@ -5,17 +5,20 @@ from ..models import Muscle
 bp = Blueprint("muscle", __name__, url_prefix="")
 
 
-@bp.route("/<musclename>")
-def get_workouts(musclename):
-    muscle = Muscle.query.filter_by(name=musclename).first()
-    workoutplans = []
+@bp.route("/<muscleid>")
+def get_workouts(muscleid):
+    muscle = Muscle.query.filter_by(id=muscleid).first()
+    workoutplans = {}
+    workoutIds = []
     for plan in muscle.workoutplans:
-        workoutplans.append(plan.id)
+        workoutplans[plan.name] = {
+            "id": plan.id, "name": plan.name, "description": plan.description}
+        workoutIds.append(plan.name)
     data = {}
-    data[muscle.id] = {
+    data = {
         "id": muscle.id,
         "name": muscle.name,
         "description": muscle.description,
-        "workoutplans": workoutplans
+        "workoutplans": workoutIds
     }
-    return {"data": data}
+    return {"data": data, "WorkoutPlans": workoutplans}

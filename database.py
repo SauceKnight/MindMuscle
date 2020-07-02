@@ -21,18 +21,18 @@ with app.app_context():
     db.session.commit()
 
     workoutplans = [
-        WorkoutPlan(name="Chest Pump", muscle_id=1 description=""),
-        WorkoutPlan(name="BodyWeight Chest", muscle_id=1 description=""),
-        WorkoutPlan(name="Chest Strength", muscle_id=1 description=""),
-        WorkoutPlan(name="Thigh/Quad Burner", muscle_id=2 description=""),
-        WorkoutPlan(name="Leg Strength", muscle_id=2 description=""),
-        WorkoutPlan(name="Squat Master", muscle_id=2 description=""),
-        WorkoutPlan(name="Bicep Blaster", muscle_id=3 description=""),
-        WorkoutPlan(name="Killer Arm", muscle_id=3 description=""),
-        WorkoutPlan(name="Stable Core", muscle_id=4 description=""),
-        WorkoutPlan(name="Six Pack Shred", muscle_id=4 description=""),
-        WorkoutPlan(name="Deadlift Master", muscle_id=5 description=""),
-        WorkoutPlan(name="Wings", muscle_id=5 description=""),
+        WorkoutPlan(name="Chest Pump", muscle_id=1, description=""),
+        WorkoutPlan(name="BodyWeight Chest", muscle_id=1, description=""),
+        WorkoutPlan(name="Chest Strength", muscle_id=1, description=""),
+        WorkoutPlan(name="Thigh/Quad Burner", muscle_id=2, description=""),
+        WorkoutPlan(name="Leg Strength", muscle_id=2, description=""),
+        WorkoutPlan(name="Squat Master", muscle_id=2, description=""),
+        WorkoutPlan(name="Bicep Blaster", muscle_id=3, description=""),
+        WorkoutPlan(name="Killer Arm", muscle_id=3, description=""),
+        WorkoutPlan(name="Stable Core", muscle_id=4, description=""),
+        WorkoutPlan(name="Six Pack Shred", muscle_id=4, description=""),
+        WorkoutPlan(name="Deadlift Master", muscle_id=5, description=""),
+        WorkoutPlan(name="Wings", muscle_id=5, description=""),
     ]
 
     for workoutplan in workoutplans:

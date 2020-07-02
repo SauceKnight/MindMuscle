@@ -8,11 +8,11 @@ with app.app_context():
     db.create_all()
 
     muscles = [
-        Muscle(name="Chest", description="Upper body. Includes workouts involving upper to lower portion of the chest and shoulders as well."),
-        Muscle(name="Leg", description="Lower Body. Includes workouts involving hamstrings, quadriceps, thighs, glutes, and calves."),
-        Muscle(name="Arm", description="Upper body. Includes workouts involving biceps, triceps, and forearms."),
-        Muscle(name="Abs", description="Core body. Includes workouts that interact with the abdominal muscle leading to a strong core/balance."),
-        Muscle(name="Back", description="Upper body. Includes workouts involving upper to lower back that help support a stable spine."),
+        Muscle(name="Chest", description=""),
+        Muscle(name="Leg", description=""),
+        Muscle(name="Arm", description=""),
+        Muscle(name="Abs", description=""),
+        Muscle(name="Back", description=""),
     ]
 
     for muscle in muscles:

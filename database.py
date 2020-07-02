@@ -8,11 +8,11 @@ with app.app_context():
     db.create_all()
 
     muscles = [
-        Muscle(name="Chest", description=""),
-        Muscle(name="Leg", description=""),
-        Muscle(name="Arm", description=""),
-        Muscle(name="Abs", description=""),
-        Muscle(name="Back", description=""),
+        Muscle(name="Chest", description=" "),
+        Muscle(name="Leg", description="  "),
+        Muscle(name="Arm", description="   "),
+        Muscle(name="Abs", description="    "),
+        Muscle(name="Back", description="       "),
     ]
 
     for muscle in muscles:
